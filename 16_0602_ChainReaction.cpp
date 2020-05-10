@@ -33,7 +33,7 @@ vector<pair<int, int> > becons(1, make_pair(0, 0));
 vector<int> d(2, 0);
 vector<vector<int> > D(1, d);
 
-int foreidx(int idx) {
+int foreidx(int idx) {  // 이걸 바이너리 서치로 개선할 수 있다
     int th = becons[idx].first - becons[idx].second;
     if (th <= 0 || idx == 1) return 0;
     for (int i = idx-1; i >= 0; --i) {
